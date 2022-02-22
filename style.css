@@ -1,0 +1,150 @@
+.nav-bar-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+body{
+    background-color: #8dc63f;
+}
+
+#slider{
+    margin: 25%;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #0f6cb6;
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img{
+    float:left;
+    width: 20%;
+}
+
+figure img{
+    height: 45vw;
+    width: 25vh;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%
+    }
+
+}
+
+.box{
+    width: 200px;
+    height: 75px;
+    background-color: grey;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    margin: 4%;
+    margin-bottom: 10%;
+}
+
+.box:hover{
+    background-color:  #0f6cb6;
+    color: white;
+    fill: white
+}
+
+
+.bottom{
+    justify-content: center;
+}
+
+.pb{
+    font-weight: bold;
+}
+
+.bottom img{
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    margin: 10%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    text-decoration: none;
+    opacity: 50%;
+  }
+  
+  .icon:hover {
+    opacity: 100%;
+    fill: white;
+  }
+
+  #page-container {
+    position: relative;
+    min-height: 75vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
+
+  @keyframes heart {
+      0% {
+          transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100%{
+        transform: translateY(0px);
+      }
+  }
+  
+
+  .heart:hover {
+    animation: 1.5s heart infinite;
+  }
