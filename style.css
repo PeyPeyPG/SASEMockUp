@@ -40,6 +40,14 @@ figure img{
     width: 25vh;
 }
 
+.wtp {
+ border-style: solid;
+ border-width: 15px;
+ border-color: yellow;
+ height: 40%; 
+ width: 72%;
+ margin-bottom: 5%;
+}
 @keyframes slider{
     0%{
         left: 0;
