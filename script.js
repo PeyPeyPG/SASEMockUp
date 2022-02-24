@@ -7,23 +7,30 @@ function fetchPokemom() {
     .then( res => {
         return res.json
     })
-    .then( data => {
+    /*.then( data => {
         console.log(data);
-        const pokemon = {
+        const pokemon = results.map((data) => {
             name: data.name,
             id: data.id,
             image: data.sprites['front_default']
-        };
+        });
         document.getElementById("randomPoke").src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png";
-    })
+    })*/
     
 }
 
-function changeImg(){
-    document.getElementById("randomPoke").src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382`.png";
-    const para = document.createElement("p");
-    para.innerText = "pokemon";
-    document.body.appendChild(p);
+function randomId(){
+    document.getElementById("randomPoke").style.filter="brightness(0%)";
+    var url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${Math.floor(Math.random() * 898) + 1}.png`;
+    document.getElementById("randomPoke").src=`${url}`;
+    console.log(url);
+    
 }
-fetchPokemom();
-changeImg();
+
+function show(){
+    document.getElementById("randomPoke").style.filter="brightness(100%)";
+}
+
+randomId();
+document.getElementById("showButton").addEventListener("click", show);
+document.getElementById("randButton").addEventListener("click", randomId);
