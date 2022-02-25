@@ -46,7 +46,7 @@ figure img{
  border-color: yellow;
  height: 40vw; 
  width: 70vw;
- background-image: url("imgs/WTP.png");
+ background-image: url("WTP.png");
  background-size: 100% 100%;
  background-repeat: no-repeat;
  margin-bottom: 0%;
@@ -62,11 +62,7 @@ figure img{
     filter: brightness(0%);
     float: left;
     margin: 10%;
-}
-
-input{
-    width: 25vw;
-    height: 10vh;
+    margin-bottom: 0%;
 }
 
 @keyframes slider{
