@@ -27,7 +27,7 @@ function fetchPokemom() {
             document.getElementById(`guessButton`).style.backgroundColor = "lime";
             document.getElementById(`guessButton`).style.color = "white";
             document.getElementById(`guessButton`).innerHTML = "CORRECT";
-            document.getElementById(`giveButton`).innerHTML = "TRY AGAIN";
+            document.getElementById(`giveButton`).innerHTML = "TRY ANOTHER";
         }
         else if (pokeStr.length > 2){
             //changes the look of both buttons and makes the input bar blank
@@ -66,7 +66,7 @@ function giveUp(){ //changes give up button to try again button and vice versa
         giveUpBool = true; //turns bool to true for other comparisons
         fetchPokemom();
     }
-    else if (document.getElementById(`giveButton`).innerHTML === "TRY AGAIN"){
+    else if (document.getElementById(`giveButton`).innerHTML !== "GIVE UP"){
         document.getElementById(`giveButton`).innerHTML = "GIVE UP";
         giveUpBool = false; //turns bool to false for other comparisons
         hide();
@@ -75,6 +75,16 @@ function giveUp(){ //changes give up button to try again button and vice versa
     }
 }
 
+function enterGuess(){ //guess with enter key
+    document.getElementById(`guess`).addEventListener("keyup", function(event) {
+        if (event.keyCode === 13){
+            event.preventDefault();
+            document.getElementById(`guessButton`).click();
+        }
+    })
+}
+
 randomId(); //initial random num and initial fetch
 document.getElementById("giveButton").addEventListener("click", giveUp); //checks giveUp button and runs giveUp function if clicked
 document.getElementById("guessButton").addEventListener("click", fetchPokemom); //checks guess button and runs fetchPokemon function if clicked
+enterGuess();
