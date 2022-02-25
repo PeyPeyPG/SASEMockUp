@@ -21,7 +21,7 @@ function fetchPokemom() {
             show();
             document.getElementById(`guess`).value = pokemon.name; //puts pokemon name in input bar
         }
-        if (pokeStr === JSON.stringify(pokemon.name)){
+        if (pokeStr.toLowerCase() === JSON.stringify(pokemon.name)){
             show();
             //changes the look of both buttons
             document.getElementById(`guessButton`).style.backgroundColor = "lime";
