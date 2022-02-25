@@ -65,6 +65,11 @@ figure img{
     margin-bottom: 0%;
 }
 
+button{
+    background-color: white;
+    color: black;
+}
+
 @keyframes slider{
     0%{
         left: 0;
