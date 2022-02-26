@@ -27,13 +27,13 @@ function fetchPokemom() {
             document.getElementById(`guessButton`).style.backgroundColor = "lime";
             document.getElementById(`guessButton`).style.color = "white";
             document.getElementById(`guessButton`).innerHTML = "CORRECT";
-            document.getElementById(`giveButton`).innerHTML = "TRY ANOTHER";
+            document.getElementById(`giveButton`).innerHTML = "ANOTHER!";
         }
         else if (pokeStr.length > 2){
             //changes the look of both buttons and makes the input bar blank
             document.getElementById(`guessButton`).style.backgroundColor = "red";
             document.getElementById(`guessButton`).style.color = "white";
-            document.getElementById(`guessButton`).innerHTML = "TRY AGAIN";
+            document.getElementById(`guessButton`).innerHTML = "AGAIN!";
             document.getElementById(`guess`).value = "";
         }
     })
