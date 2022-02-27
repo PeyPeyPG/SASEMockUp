@@ -65,6 +65,14 @@ figure img{
     margin-bottom: 0%;
 }
 
+#guess{
+    background-image: url('question-circle.svg');
+    background-position: 95%;
+    background-size: ;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    width: 50vw;
+}
 button{
     background-color: white;
     color: black;
