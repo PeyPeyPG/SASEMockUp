@@ -59,6 +59,7 @@ function giveUp(){ //changes give up button to try again button and vice versa
     if (document.getElementById(`giveButton`).innerHTML === "GIVE UP"){
         show();
         document.getElementById(`giveButton`).innerHTML = "TRY AGAIN";
+        document.getElementById(`guess`).style.backgroundImage = "url('x-circle.svg')"
         giveUpBool = true; //turns bool to true for other comparisons
         fetchPokemom();
     }
