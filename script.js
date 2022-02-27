@@ -50,6 +50,7 @@ function show(){ //reveals pokemon
 
 function guessAgain(){ //guess input box style changes
     document.getElementById(`guess`).value = "";
+    document.getElementById(`guess`).placeholder = "POKEMON NAME";
     document.getElementById(`guess`).style.backgroundImage = "url('question-circle.svg')"
     document.getElementById(`guess`).style.backgroundColor = "white";
 }
