@@ -1,5 +1,6 @@
 var pokeNum; //variable for number of Pokemon
 var giveUpBool = false; //variable to see if player has given up
+var streakNum = 0;
 
 //fetching pokemon data from api
 function fetchPokemom() {
@@ -26,6 +27,8 @@ function fetchPokemom() {
             document.getElementById(`guess`).style.backgroundImage = "url('check2-circle.svg')"
             document.getElementById(`guess`).style.backgroundColor = "lime";
             document.getElementById(`giveButton`).innerHTML = "TRY ANOTHER!"
+            streakNum++;
+            document.getElementById(`streak`).innerHTML = `Streak: ${streakNum}`;
         }
         else if (pokeStr.length > 2){
             document.getElementById(`guess`).value = "";
@@ -60,6 +63,8 @@ function giveUp(){ //changes give up button to try again button and vice versa
         show();
         document.getElementById(`giveButton`).innerHTML = "TRY AGAIN";
         document.getElementById(`guess`).style.backgroundImage = "url('x-circle.svg')"
+        streakNum = 0;
+        document.getElementById(`streak`).innerHTML = `Streak: ${streakNum}`;
         giveUpBool = true; //turns bool to true for other comparisons
         fetchPokemom();
     }
