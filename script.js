@@ -14,6 +14,11 @@ function fetchPokemom() {
             id: data.id,
             image: data.sprites['front_default']
         };
+        const name = pokemon.name;
+        if ((pokemon.name).includes("-")){
+            const arr = (pokemon.name).split("-");
+            name = arr[0]
+        }
         hide(); 
         var url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeNum}.png`;
         document.getElementById("randomPoke").src=`${url}`; //uses pokeNum to get image
@@ -22,7 +27,7 @@ function fetchPokemom() {
             show();
             document.getElementById(`guess`).value = pokemon.name; //puts pokemon name in input bar
         }
-        if (pokeStr.toLowerCase() === JSON.stringify(pokemon.name)){
+        if ((pokeStr.toLowerCase()).includes(pokemon.name)){
             show();
             document.getElementById(`guess`).style.backgroundImage = "url('check2-circle.svg')"
             document.getElementById(`guess`).style.backgroundColor = "lime";
