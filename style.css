@@ -20,7 +20,8 @@ body{
 
 .body h1{
     font-weight: 500;
-    font-family: Blippo, fantasy;
+    font-family: impact;
+    font-size: 10vw;
     
 }
 
@@ -70,7 +71,7 @@ figure img{
 
 .wtp {
  border-style: solid;
- border-width: 15px;
+ border-width: 10px;
  border-color: #ffe031;
  height: 40vw; 
  width: 70vw;
@@ -87,9 +88,12 @@ border-radius: 32px;
  
 }
 
-.wtp h2{
+.wtp h5{
     float: right;
-    margin-right: 5%;
+    margin-right: 25px;
+    margin-top: 5px;
+    font-size: 3vw;
+    font-weight: bold;
 }
 
 #randomPoke{
@@ -152,6 +156,8 @@ button{
     text-decoration: none;
     margin: 4%;
     margin-bottom: 10%;
+    font-family: "Copperplate", fantasy;
+    font-size: large;
 }
 
 .isabelle{
