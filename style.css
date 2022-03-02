@@ -47,9 +47,10 @@ body{
     position: absolute;
     width: 5em;
     animation: 1s float infinite;
-    margin-left: calc(var(--width, 0) * 0.85%);
+    left: calc(var(--width, 0) * .85%);
+    /*margin-left: calc(var(--width, 0) * .9vw);*/
     bottom: 50%;
-    margin-bottom: 5%;
+    offset-distance : 10%;
 }
 
 @keyframes float {
@@ -89,10 +90,9 @@ body{
 }
 
 .body h1{
-    font-weight: 500;
-    font-family: impact;
+    font-weight: 800;
+    font-family: "impact", Helvetica, serif;
     font-size: 10vw;
-    
 }
 
 #slider{
@@ -168,6 +168,7 @@ border-radius: 32px;
 button{
     background-color: white;
     color: black;
+    border-radius: 24em;
 }
 
 @keyframes slider{
@@ -210,8 +211,9 @@ button{
     text-decoration: none;
     margin: 4%;
     margin-bottom: 10%;
-    font-family: "Copperplate", fantasy;
+    font-family: 'impact', Helvetica, serif;
     font-size: large;
+    font-weight: 800;
 }
 
 .isabelle{

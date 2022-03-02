@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
   <title>VOTE FOR PEYTON!</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -18,7 +24,7 @@
 
 <body>
   <div id="loading">
-  <image class="balloon pb-3" src="ballon.png"/>
+  <image class="balloon pb-3" id="balloon" src="ballon.png"/>
   <div class="loader" style="--width: 10;" data-label="loading...">
   </div>
   <image src="load-island.gif" class="island"/>
@@ -109,14 +115,14 @@
             </div>
           </a>
         </div>
-        <image class="mb-2" src="wtptext.png" style="width: 30vw;"/>
+        <image class="mb-2" src="wtptext.png" style="width: 40vw;"/>
         <figure class="wtp">
           <image id="randomPoke" style="width: 25vw; height: 25vw;"
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" />
+            src="" />
           <h5 id="streak">Streak: 0</h5>
         </figure>
         <div class="mb-1 mt-2 text-center input">
-          <input placeholder="POKEMON NAME" id="guess" type="text">
+          <input placeholder="ENTER TO SUBMIT" id="guess" type="text" autocomplete="off">
         </input>
         </div>
         <div class="mb-3">
