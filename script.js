@@ -14,11 +14,13 @@ function fetchPokemom() {
             id: data.id,
             image: data.sprites['front_default']
         };
-        const name = pokemon.name;
+        var name = pokemon.name;
+        console.log(pokemon.name)
         if ((pokemon.name).includes("-")){
-            const arr = (pokemon.name).split("-");
-            name = arr[0]
+            var arr = (pokemon.name).split("-");
+            name = arr[0];
         }
+        console.log(name)
         hide(); 
         var url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeNum}.png`;
         document.getElementById("randomPoke").src=`${url}`; //uses pokeNum to get image
@@ -27,7 +29,7 @@ function fetchPokemom() {
             show();
             document.getElementById(`guess`).value = pokemon.name; //puts pokemon name in input bar
         }
-        if ((pokeStr.toLowerCase()).includes(pokemon.name)){
+        if ((pokeStr.toLowerCase()).includes(name)){
             show();
             document.getElementById(`guess`).style.backgroundImage = "url('check2-circle.svg')"
             document.getElementById(`guess`).style.backgroundColor = "lime";
@@ -44,7 +46,7 @@ function fetchPokemom() {
 }
 
 function randomId(){ //reasigns pokeNum with another random value
-    pokeNum = Math.floor(Math.random() * 898) + 1; 
+    pokeNum = Math.floor(Math.random() * 898) + 1;
     fetchPokemom();
 }
 
