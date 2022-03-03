@@ -22,7 +22,7 @@ body{
     height: 3em;
     background-color: white;
     border-radius: 1.5em;
-    color: lightyellow;
+    color: black;
     margin-left: 10%;
     top: 50%;
 }
@@ -211,9 +211,12 @@ button{
     text-decoration: none;
     margin: 4%;
     margin-bottom: 10%;
-    font-family: 'impact', Helvetica, serif;
-    font-size: large;
-    font-weight: 800;
+}
+
+.box h6{
+    font-family: Gill Sans, sans-serif;
+    font-size: 85%;
+    font-weight: bold;
 }
 
 .isabelle{
